@@ -4,15 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        h3{
+            color: red;
+        }
+    </style>
 </head>
 <body>
+    {% for message in messages %}
+    <h3>{{message}}</h3>
+    {% endfor %}
     <h1>login now</h1>
 
-    <form action="login" method="POST"></form>
+    <form action="login" method="POST" >
     <p>Username</p>
     <input type="text" name="username"/>
     <p>passcode</p>
     <input type="password" name="password"/> <br>
     <input type="submit"/>
+</form>
 </body>
 </html>
