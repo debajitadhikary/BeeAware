@@ -21,5 +21,16 @@ def register(request):
             if User.objects.filter(email=email).exists():
                 messages.info(request, 'Email Already used')
                 return redirect('register')
-                
-    return render(request , 'register.html')
+            elif User.objects.filter(username=username).exists():
+                messages.info(request, 'Username already used')
+                return redirect('register')
+            else:
+                user = User.objects.create_user(username=username , email=email , password=password)
+                user.save();
+                return redirect('login')
+        else:
+            messages.info(request, 'Password not same')
+            return redirect('register')
+    else:
+        return render(request , 'register.html')
+
