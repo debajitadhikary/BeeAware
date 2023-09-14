@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F0F8FF;
+}
+
+.container {
+    width: 430px;
+    margin: 0 auto;
+    border: 2px solid #B0C4DE;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px #ADD8E6;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+}
+
+h5, h3 {
+    text-align: center;
+    color: #939300;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.input_title {
+    display: block;
+    color: #939300;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #B0C4DE;
+    border-radius: 5px;
+}
+
+#submit_button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 16px;
+    margin: auto;
+    background-color: #939300;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.message {
+    text-align: center;
+    color: red;
+}
