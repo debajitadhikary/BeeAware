@@ -61,3 +61,8 @@ def right_to_edu(request):
 def quiz(request):
     return render(request, 'quiz.html')
 
+
+
+def quiz_q1(request):
+    return render(request, 'quiz_q1.html')
+
