@@ -1,14 +1,14 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
-    <style>
-        h3{
-            color: red;
-        }
-    </style>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <!-- <style>
+        
+    </style> -->
 </head>
 <body>
     {% for message in messages %}
@@ -16,13 +16,44 @@
     {% endfor %}
     <h1>login now</h1>
 
-    <form action="login" method="POST" >
-        {% csrf_token %}
-    <p>Username</p>
+    <!-- <form action="login" method="POST" > -->
+        <!-- {% csrf_token %} -->
+    <!-- <p>Username</p>
     <input type="text" name="username"/>
     <p>passcode</p>
     <input type="password" name="password"/> <br>
     <input type="submit"/>
-</form>
+</form> -->
+
+
+<div class="container">
+    <img src="./resources/BeewareLogo.png" alt="Beeaware Logo" class="logo">
+    <h1>Beeaware</h1>
+    <p>Welcome to Beeaware, a child awareness website that teaches you to make ethical decisions in critical situations.</p>
+
+    <form id="login-form" action="login" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <input type="submit"/>
+        <!-- <button id="login-button" onclick="window.location.href = 'main_page.html';">Login</button> -->
+    </form>
+    <p class="message" id="message"></p>
+</div>
+
+
+
+
+
+
+
+
 </body>
 </html>
+
