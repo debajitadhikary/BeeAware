@@ -1,3 +1,5 @@
+{% load static %}
+
 <html>
 <head>
     <style>
@@ -89,7 +91,7 @@
 </head>
 <body>
     <div class="container">
-        <img src="./resources/FreeEducation.jpg" alt="Beeaware Logo" class="picture">
+        <img src="{% static 'images/FreeEducation.jpg' %}" alt="Beeaware Logo" class="picture">
         <h3>Your friend Ram wants to go to school, but his family doesn't have enough money for fees
             What should he do ?
         </h3>
