@@ -1,0 +1,166 @@
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            
+        }
+
+        .container {
+            background-color: #FFFF00;
+            width: 600px;
+            margin: 0 auto;
+            border: 2px solid #000000;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px #808080;
+        }
+
+        .picture {
+            display: block;
+            margin: 0 auto;
+            width: 400px;
+            height: auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #000000;
+        }
+
+        .options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .option {
+            width: 45%;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #FFFFFF;
+            color: #000000;
+            border: 2px solid #000000;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .option:hover {
+            background-color: #C0C0C0;
+        }
+
+        .option.selected {
+            background-color: #808080;
+        }
+
+        .option.correct {
+            background-color: #00FF00;
+        }
+
+        .option.wrong {
+            background-color: #FF0000;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #000000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #808080;
+        }
+
+        button.disabled {
+            background-color: #C0C0C0;
+            cursor: not-allowed;
+        }
+
+        .message {
+            text-align: center;
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="./resources/FreeEducation.jpg" alt="Beeaware Logo" class="picture">
+        <h3>Your friend Ram wants to go to school, but his family doesn't have enough money for fees
+            What should he do ?
+        </h3>
+        <div class="options" id="options">
+            <div class="option" id="option-1">A. Arrange for money anyhow</div>
+            <div class="option" id="option-2">B. Enroll into a school regardless</div>
+            <div class="option" id="option-3">C. Take a loan to pay the fees</div>
+            <div class="option" id="option-4">D. Forget the dream of having education</div>
+        </div>
+        <button type="button" id="submit-button">Submit</button>
+        <p class="message" id="message"></p>
+    </div>
+    <script>
+        // Get the elements from the document
+        var options = document.getElementById("options");
+        var option1 = document.getElementById("option-1");
+        var option2 = document.getElementById("option-2");
+        var option3 = document.getElementById("option-3");
+        var option4 = document.getElementById("option-4");
+        var submitButton = document.getElementById("submit-button");
+        var message = document.getElementById("message");
+
+        // Define a variable to store the selected option
+        var selectedOption = null;
+
+        // Define a function to handle the click event on the options
+        function selectOption(event) {
+          // Get the clicked option element
+          var option = event.target;
+
+          // Remove the selected class from all the options
+          option1.classList.remove("selected");
+          option2.classList.remove("selected");
+          option3.classList.remove("selected");
+          option4.classList.remove("selected");
+
+          // Add the selected class to the clicked option
+          option.classList.add("selected");
+
+          // Set the selectedOption variable to the clicked option's id
+          selectedOption = option.id;
+
+          // Enable the submit button
+          submitButton.disabled = false;
+
+          // Clear the message
+          message.textContent = "";
+      }
+
+      // Add an event listener to the options container to handle the click event on the options
+      options.addEventListener("click", selectOption);
+
+      // Define a function to handle the click event on the submit button
+      function submitAnswer() {
+          // Disable the submit button
+          submitButton.disabled = true;
+
+          // Check if the selectedOption is correct or wrong
+          if (selectedOption === "option-2") {
+              // If correct, add the correct class to the selected option and display a success message
+              document.getElementById(selectedOption).classList.add("correct");
+              message.textContent = "You are right! Spiders are not insects, they are arachnids.";
+          } else {
+              // If wrong, add the wrong class to the selected option and display a failure message
+              document.getElementById(selectedOption).classList.add("wrong");
+              message.textContent = "You are wrong! The correct answer is B. Spider.";
+          }
+      }
+
+      // Add an event listener to the submit button to handle the click event
+      submitButton.addEventListener("click", submitAnswer);
+  </script>
+</body>
+</html>
