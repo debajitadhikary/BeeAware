@@ -55,3 +55,16 @@ main .card p {
     height: 100px;
     width: 100px;
 }
+
+.nav {
+    list-style: none;
+    display: flex;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #ffcc00;
+}

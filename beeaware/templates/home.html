@@ -13,8 +13,10 @@
 <header>
     <img src="https://www.w3schools.com/w3images/avatar2.png" alt="User Image">
     <p id="intro"> Hi , {{user.username}}</p>
+    
 </header>
 <main>
+    
     <div class="card">
         <img class ="card_img" onclick="window.location.href = 'right_to_edu';" src="{% static 'images/books.jpeg' %}" alt="books">
         <h3>Right to Education</h3>
@@ -36,6 +38,18 @@
     </div>
 
 </main>
+
+<footer>
+    <!-- <p>SHARING IS CARING! SHARE THIS KNOWLEDGE WITH FRIENDS AND FAMILY</p> -->
+    <div class="header">
+        <!-- <div class="logo">Beeaware</div> -->
+        <ul class="nav">
+            <li><a href="logout">logout</a></li>
+            <!-- <li><a href="#">About</a></li> -->
+            <!-- <li><a href="#">Contact</a></li> -->
+        </ul>
+    </div>
+  </footer>
 
 </body>
 </html>
