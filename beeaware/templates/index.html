@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,5 +20,131 @@
 
 
 <h1 class="m">Hello world</h1>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beeaware</title>
+    <style>
+        /* Style the body */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        /* Style the header */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #ffcc00;
+        }
+
+        /* Style the logo */
+        .logo {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333333;
+        }
+
+        /* Style the navigation menu */
+        .nav {
+            list-style: none;
+            display: flex;
+        }
+
+        /* Style the navigation links */
+        .nav li a {
+            display: block;
+            padding: 10px 20px;
+            color: #333333;
+            text-decoration: none;
+        }
+
+        /* Change the color of the links on hover */
+        .nav li a:hover {
+            background-color: #ffff66;
+        }
+
+        /* Style the main section */
+        .main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+        }
+
+        /* Style the content container */
+        .content {
+            max-width: 800px;
+            text-align: center;
+        }
+
+        /* Style the main heading */
+        .content h1 {
+            font-size: 64px;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        /* Style the subheading */
+        .content p {
+            font-size: 24px;
+            color: #666666;
+            margin-bottom: 40px;
+        }
+
+        /* Style the button */
+        .content button {
+            display: inline-block;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            background-color: #ffcc00;
+            color: #333333;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        /* Change the color of the button on hover */
+        .content button:hover {
+            background-color: #ffff66;
+        }
+    </style>
+</head>
+<body>
+    <!-- Create a header with a logo and a navigation menu -->
+    <div class="header">
+        <div class="logo">Beeaware</div>
+        <ul class="nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Create a main section with a content container -->
+    <div class="main">
+        <div class="content">
+            <!-- Create a main heading, a subheading and a button -->
+            <h1>Welcome to Beeaware</h1>
+            <p>Creating Ethical superheroes of tommorrow</p>
+
+            <!-- <button onclick="window.location.href = 'main_page.html';">Open local page</button> -->
+            {% if user.is_authenticated %}
+            <button onclick="window.location.href = 'logout';">logout</button>
+            <!-- <li><a href="">logout</a></li> -->
+            {% else %}
+            <!-- <li> <a href="login">Login or signup</a></li> -->
+            <button onclick="window.location.href = 'login';">login</button>
+            {% endif %}
+        </div>
+    </div>
 </body>
 </html>

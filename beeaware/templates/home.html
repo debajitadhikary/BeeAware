@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en"></html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Beware</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+<header>
+    <img src="https://www.w3schools.com/w3images/avatar2.png" alt="User Image">
+    <p id="intro"> Hi user</p>
+</header>
+<main>
+    <div class="card">
+        <img class ="card_img" onclick="window.location.href = 'quiz.html';" src="resources/books.jpeg" alt="books">
+        <h3>Right to Education</h3>
+    </div>
+
+    <div class="card">
+        <img class ="card_img" src="{% static 'images/BadTouch.jpeg' %}" alt="Bad Touch">
+        <h3>Good Touch bad Touch</h3>
+    </div>
+    
+    <div class="card">
+        <img class ="card_img" src="{% static 'images/ChildLabour.jpeg' %}" alt="ChildLabour">
+        <h3>Child labour</h3>
+    </div>
+    
+    <div class="card">
+        <img class ="card_img" src="{% static 'images/cyberBullying.jpeg' %}" alt="CyberrBullying">
+        <h3>Cyber Bullying</h3>
+    </div>
+
+</main>
+
+</body>
+</html>
