@@ -56,3 +56,8 @@ def logout(request):
 
 def right_to_edu(request):
     return render(request, 'right_to_edu.html')
+
+
+def quiz(request):
+    return render(request, 'quiz.html')
+
