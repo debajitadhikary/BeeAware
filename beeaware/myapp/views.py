@@ -54,3 +54,5 @@ def logout(request):
     auth.logout(request)
     return redirect('/')
 
+def right_to_edu(request):
+    return render(request, 'right_to_edu.html')
